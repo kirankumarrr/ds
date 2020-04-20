@@ -42,9 +42,62 @@ LinkedList.prototype.addToTail = function(value){
     this.tail = newNode
 }
 
+LinkedList.prototype.removeHead = function(){
+    //when list is completely {}
+    if(!this.head) return null;
+    //When removing node we should return value of present node
+    let value = this.head.value;
+    //copy next node to present head
+    this.head = this.head.next;
+    //If head is there then that prev Node will be NULL
+    if(this.head){
+        this.head.prev =null
+    }else{
+        //That means no more Node in the {}
+        this.tail = null
+    }
+    return value;
+}
+
+LinkedList.prototype.removeTail = function(){
+    //when list is completely {}
+    if(!this.tail) return null;
+    //When removing node we should return value of present node
+    let value = this.tail.value;
+    //copy next node to present head
+    this.tail = this.tail.prev;
+    //If head is there then that prev Node will be NULL
+    if(this.tail){
+        this.tail.next =null
+    }else{
+        //That means no more Node in the {}
+        this.head = null
+    }
+    return value;
+}
+
+LinkedList.prototype.search= function(searchValue){
+    let currentNode= this.head;
+    while(currentNode){
+        if(currentNode.value===searchValue) return searchValue;
+        currentNode = currentNode.next
+    }
+}
+
+LinkedList.prototype.indexOf= function(searchValue){
+    let collectionOfIndexs =[];
+    let currentIndex=0;
+    let currentNode= this.head;
+    while(currentNode){
+        if(currentNode.value===searchValue) collectionOfIndexs.push(currentIndex)
+        currentNode = currentNode.next;
+        currentIndex++;
+    }
+    return collectionOfIndexs;
+}
 
 var ll = new LinkedList();
 ll.addToTail(1);
 console.log(ll);
-// ll.addToTail(2);
-// console.log(ll);
+ll.addToTail(2);
+console.log(ll);
