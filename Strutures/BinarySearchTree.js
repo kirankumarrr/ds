@@ -93,5 +93,8 @@ bst.breathFirstTraversal(log);
 console.log('%c BreadthForTravsal getMaxVal', 'background: #222; color: #bada55');
 console.log('%c BreadthForTravsal getMinVal', 'background: #222; color: #bada90');
 bst.getMaxVal();
+let obj={
+    a:2
+}
 console.log('%c BreadthForTravsal getMinVal', 'background: #222; color: #bada90');
 // bst.getMinVal();
