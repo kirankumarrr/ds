@@ -94,7 +94,7 @@ console.log('%c BreadthForTravsal getMaxVal', 'background: #222; color: #bada55'
 console.log('%c BreadthForTravsal getMinVal', 'background: #222; color: #bada90');
 bst.getMaxVal();
 let obj={
-    a:2
+  a:77
 }
-console.log('%c BreadthForTravsal getMinVal', 'background: #222; color: #bada90');
+console.log('%c BreadthForTravsal getMinVal', 'background: #222; color: #bada38');
 // bst.getMinVal();
