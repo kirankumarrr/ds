@@ -46,7 +46,7 @@ BST.prototype.depthFirstTraversalOrder = function(iteratorFxn,order){
  *        20    45   55      70
 */
 var bst = new BST(50);
-bst.insert(40);
+bst.insert(50);
 bst.insert(60);
 bst.insert(20);
 bst.insert(45);
@@ -91,6 +91,10 @@ BST.prototype.getMinVal = function(){
 }
 bst.breathFirstTraversal(log);
 console.log('%c BreadthForTravsal getMaxVal', 'background: #222; color: #bada55');
+console.log('%c BreadthForTravsal getMinVal', 'background: #222; color: #bada90');
 bst.getMaxVal();
-console.log('%c BreadthForTravsal getMinVal', 'background: #222; color: #bada55');
+let obj={
+  a:77
+}
+console.log('%c BreadthForTravsal getMinVal', 'background: #222; color: #bada38');
 // bst.getMinVal();
