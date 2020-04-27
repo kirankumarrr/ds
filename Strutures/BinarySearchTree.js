@@ -92,5 +92,5 @@ BST.prototype.getMinVal = function(){
 bst.breathFirstTraversal(log);
 console.log('%c BreadthForTravsal getMaxVal', 'background: #222; color: #bada55');
 bst.getMaxVal();
-console.log('%c BreadthForTravsal getMinVal', 'background: #222; color: #bada38');
+console.log('%c BreadthForTravsal getMinVal', 'background: #222; color: #bada90');
 // bst.getMinVal();
