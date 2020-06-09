@@ -1,3 +1,7 @@
+//Complex=> O(n)<O(nlogn)
+// index can be found O(N)
+// but best-> lowerBound(nlogn)
+// accutrate Bound ->(nlogn)
 function mergeFindIndex(arr,low,high,n){
   if(arr[low]>n || arr[high]<n){
     return -1
