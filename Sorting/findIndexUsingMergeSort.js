@@ -1,4 +1,4 @@
-//Important: This is good only items are in sorted order
+//Important: This is good only when items are in sorted order
 //Complex=> O(n)<O(nlogn)
 // index can be found O(N)
 // but best-> lowerBound(nlogn)
