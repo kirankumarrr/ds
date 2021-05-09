@@ -157,24 +157,38 @@ class SinglyLinkedList{
       @desc : reverse LinkedList
       @return { boolean }
     */
+
+    /*
+    *Explaination
+
+             100            200          300            400
+        -------------------------------------------------
+            1-200         2-300         3-400            4-null
+        -------------------------------------------------
+            
+ 1.        prevNode     current        next
+            null           200           300    
+
+ 2.        prevNode     current        next
+            200           300           400    
+
+ 3.        prevNode     current        next
+            300          400           null    
+    
+    */
     reverse(){
-        var node = this.head 
+        var currentNode = this.head 
         this.head = this.tail 
-        this.tail = node 
+        this.tail = currentNode 
 
         var next = null
         var prev = null
 
         for(var i=0;i<this.length;i++){
-            console.log("---------------------------->",i);
-           next = node.next; 
-           console.log(" next = node.next",{next,nodeNext : node.next,});
-           node.next = prev ;
-            console.log("node.next = prev ",{node,prevNode : prev,});
-           prev = node ;
-            console.log("prev = node",{prev,node});
-           node = next ; 
-            console.log("node = next",{next,node});
+           next = currentNode.next; 
+           currentNode.next = prev ;
+           prev = currentNode ;
+           currentNode = next ; 
         }
         return this
     }
