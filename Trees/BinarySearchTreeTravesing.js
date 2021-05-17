@@ -110,6 +110,21 @@ class BinarySearchTree {
     return visited;
   }
 
+  /*
+  * @method breathFirstSearch Recursive
+    Added Recursive Method for BFS
+  */
+  breathFirstSearchRecursive(queue = [this.root], list = []) {
+    if (queue.length) {
+      var currentNode = queue.shift();
+      list.push(currentNode.value);
+      if (currentNode.left) queue.push(currentNode.left);
+      if (currentNode.right) queue.push(currentNode.right);
+      return this.breathFirstSearchRecursive(queue, list);
+    }
+    return list;
+  }
+
   DFSPreOrder() {
     var visited = [];
     function traverse(node) {
